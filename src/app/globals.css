@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    html {
-        font-family: 'Open Sans', sans-serif;
-    }
-}
 
 body {
+    font-family: 'Inconsolata', monospace !important;
     background: #1a1b1e;
     color: #fff;
+}
+.logo {
+    font-family: 'Dancing Script', cursive;
 }

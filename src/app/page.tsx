@@ -1,8 +1,10 @@
+"use client";
 import React from 'react'
+import LayoutContainer from "@/containers/LayoutContainer";
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <LayoutContainer>Home</LayoutContainer>
   )
 }
 
