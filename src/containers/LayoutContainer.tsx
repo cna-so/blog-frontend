@@ -1,13 +1,13 @@
-import React, {ReactNode} from 'react';
+import React, { ReactNode } from "react";
 import Header from "@/components/header";
 
-const LayoutContainer = ({children}: { children: ReactNode }) => {
-    return (
-        <section className="container mx-auto px-4">
-            <Header/>
-            {children}
-        </section>
-    );
+const LayoutContainer = ({ children }: { children: ReactNode }) => {
+  return (
+    <section className="container mx-auto px-4">
+      <Header />
+      <div className="w-full">{children}</div>
+    </section>
+  );
 };
 
 export default LayoutContainer;
