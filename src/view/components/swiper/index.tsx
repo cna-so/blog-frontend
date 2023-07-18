@@ -1,12 +1,12 @@
-import React, { FC } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import SwiperItem from "@/components/swiper/SwiperItem";
+import SwiperItem from "@/view/components/swiper/SwiperItem";
 import homeStyles from "@/styles/home.module.css";
 import { IPostModels } from "@/models/PostModels";
 
-const SwiperGenerator = ({ data }: { data: IPostModels }) => {
+const SwiperGenerator = ({ posts }: { posts: IPostModels["posts"] }) => {
   return (
     <Swiper
       slidesPerView={"auto"}
@@ -15,7 +15,7 @@ const SwiperGenerator = ({ data }: { data: IPostModels }) => {
       pagination={false}
       className={homeStyles.swiper}
     >
-      {data.posts.map((post, index) => (
+      {posts?.map((post, index) => (
         <SwiperSlide key={index} className={"w-80 max-w-[300px]"}>
           <SwiperItem
             key={index}

@@ -17,3 +17,10 @@ export interface IPostModels {
     _id: string;
   }[];
 }
+
+export interface IPostProps {
+  showMore: (page: number) => void;
+  posts: IPostModels["posts"];
+  next_page: number;
+  previous_page: number;
+}
