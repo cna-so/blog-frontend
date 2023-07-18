@@ -1,10 +1,10 @@
 import React from "react";
 import HomeContainer from "@/containers/HomeContainer";
 import { IPostModels } from "@/models/PostModels";
+import { fetchHomeArticle } from "@/api";
 
-export async function getServerSideProps() {
-  const res = await fetch("http://localhost:8080/post/all?page=1");
-  const data = await res.json();
+export async function getServerSideProps({ query: { page = 1 } }) {
+  const data = await fetchHomeArticle(page);
   return { props: { data } };
 }
 
