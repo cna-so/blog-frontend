@@ -11,7 +11,7 @@ export interface IPostModels {
       title: string;
       link: string;
     }[];
-    cover_url: string;
+    banner: string;
     created_at: Date;
     user_id: string;
     _id: string;

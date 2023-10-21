@@ -11,7 +11,7 @@ const LastArticles = ({ posts, showMore, next_page }: IPostProps) => {
         {posts?.map((post) => (
           <div key={post._id} className={""}>
             <SwiperItem
-              imageUrl={post.cover_url}
+              imageUrl={post.banner}
               tags={post.tags}
               title={post.title}
             />

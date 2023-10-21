@@ -9,6 +9,7 @@ const SwiperGenerator = dynamic(() => import("@/view/components/swiper"));
 
 const HomeContainer = () => {
   const { latestPost, showMoreLatestPosts } = useHomeControllers();
+  console.log(latestPost)
   return (
     <LayoutContainer>
       <div>

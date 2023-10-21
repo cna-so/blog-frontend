@@ -7,6 +7,7 @@ import homeStyles from "@/styles/home.module.css";
 import { IPostModels } from "@/models/PostModels";
 
 const SwiperGenerator = ({ posts }: { posts: IPostModels["posts"] }) => {
+    console.log(posts)
   return (
     <Swiper
       slidesPerView={"auto"}
@@ -15,12 +16,12 @@ const SwiperGenerator = ({ posts }: { posts: IPostModels["posts"] }) => {
       pagination={false}
       className={homeStyles.swiper}
     >
-      {posts?.map((post, index) => (
+    {posts?.map((post, index) => (
         <SwiperSlide key={index} className={"w-80 max-w-[300px]"}>
           <SwiperItem
             key={index}
-            imageUrl={post.cover_url}
-            tags={post.tags}
+            imageUrl={post?.banner}
+            tags={post?.tags}
             title={post.title}
           />
         </SwiperSlide>
